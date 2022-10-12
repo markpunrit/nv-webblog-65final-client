@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import UserIndex from '@/components/Users/Index'
 import UserEdit from '@/components/Users/EditUser'
 import UserShow from '@/components/Users/ShowUser'
@@ -8,6 +9,7 @@ import UserCreate from '@/components/Users/CreateUser'
 Vue.use(Router)
 
 export default new Router({
+  mode:'Speaker',
   routes: [
     {
       path: '/user/create',
