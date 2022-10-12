@@ -6,10 +6,15 @@ import UserEdit from '@/components/Users/EditUser'
 import UserShow from '@/components/Users/ShowUser'
 import UserCreate from '@/components/Users/CreateUser'
 
+import createIndex from '@/components/creates/Index'
+import createCreate from '@/components/creates/Createcreate'
+import createEdit from '@/components/creates/Editcreate'
+import createShow from '@/components/creates/Showcreate'
+
 Vue.use(Router)
 
 export default new Router({
-  mode:'Speaker',
+  mode:'speaker',
   routes: [
     {
       path: '/user/create',
@@ -31,8 +36,25 @@ export default new Router({
       name: 'users',
       component: UserIndex
     },
-
-    
-
+    {
+      path: '/creates',
+      name: 'creates',
+      component: createIndex
+    },
+    {
+      path: '/create/create',
+      name: 'creates-edit',
+      component: createCreate
+    },
+    {
+      path: '/create/edit/:createId',
+      name: 'create-edit',
+      component: createEdit
+    },
+    {
+      path: '/create/:createId',
+      name: 'create',
+      component: createShow
+    },
   ]
 })

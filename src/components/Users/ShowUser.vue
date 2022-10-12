@@ -13,6 +13,7 @@ import UserService from "@/services/UserService";
 export default {
   data() {
     return {
+      
       user: null
     };
   },
